@@ -5,12 +5,13 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "build"
+    "extract:mac": "rm -rf app-asar && asar extract 'dist/mac/electron-puppeteer-quick-start.app/Contents/Resources/app.asar' app-asar",
+    "build": "rm -rf dist && electron-builder -m --x64"
   },
   "build": {
     "appId": "com.electron.quickstart",
-    "win": {
-      "target": "nsis"
+    "mac": {
+      "category": "public.app-category.developer-tools"
     }
   },
   "repository": "https://github.com/Raidus/electron-puppeteer-quick-start",
@@ -24,10 +25,11 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "dependencies": {
-    "puppeteer": "^0.12.0"
+    "puppeteer": "1.6.0"
   },
   "devDependencies": {
-    "electron": "^1.8.1",
-    "electron-builder": "^19.45.4"
+    "asar": "^0.14.3",
+    "electron": "1.8.4",
+    "electron-builder": "20.22.1"
   }
 }

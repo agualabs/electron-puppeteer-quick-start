@@ -11,9 +11,7 @@ const app = require('electron').remote.app,
 async function getPic(url) {
   const browser = await puppeteer.launch({
     headless: false,
-    slowMo: 250,
-    executablePath:
-      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+    slowMo: 250
   });
   const page = await browser.newPage();
   await page.goto(url);
