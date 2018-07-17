@@ -7,6 +7,7 @@
 `electron .`
 
 Main process runs puppeteer => Chrome opens google.de
+
 Render process does nothing interesting
 
 ## Build
@@ -14,6 +15,7 @@ Render process does nothing interesting
 
 ## Actual problem
 `yarn open`
+
 Main process does nothing
 
 # Potential reason
