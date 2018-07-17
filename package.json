@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "extract:mac": "rm -rf app-asar && asar extract 'dist/mac/electron-puppeteer-quick-start.app/Contents/Resources/app.asar' app-asar",
-    "build": "rm -rf dist && electron-builder -m --x64"
+    "build": "rm -rf dist && electron-builder -m --x64",
+    "open": "open dist/mac/electron-puppeteer-quick-start.app/Contents/MacOS/electron-puppeteer-quick-start"
   },
   "build": {
     "appId": "com.electron.quickstart",

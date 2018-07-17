@@ -12,13 +12,19 @@ Render process does nothing interesting
 ## Build
 `yarn build`
 
-## Unpack asar dir
+## Actual problem
+`yarn open`
+Main process does nothing
+
+# Potential reason
+
+## Unpack asar to `app-asar`
 `yarn extract:mac`
 
 ## Execute asar
 `cd app-asar && electron .`
 
-Main process runs puppeteer => Does nothing
+Main process does nothing
 
 ## Modify rights deep (still in `app-asar` directory)
 
